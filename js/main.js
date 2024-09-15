@@ -21,7 +21,6 @@ function reiniciarJuego(){
 }
 
 function JUGAR() {
-    while (true) {
         do {
             let jugada = prompt("Elige piedra, papel o tijera").toLocaleLowerCase()
             if ((jugada != "piedra") && (jugada != "papel") && (jugada != "tijera")) {
@@ -49,10 +48,9 @@ function JUGAR() {
         }
         if(confirm("desea volver a jugar?")){
             reiniciarJuego()
-        } else{
-            break
+            JUGAR()
+        }else{
+            console.log("Gracias por jugar")
         }
-    }
 }
-JUGAR()
 
